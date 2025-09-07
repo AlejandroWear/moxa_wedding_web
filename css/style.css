@@ -42,9 +42,11 @@ section {
     background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
     text-align: center;
 }
+/* 'Times New Roman', serif */
+/* 'Playfair Display', serif */
 
 .wedding-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Times New Roman', serif;
     font-size: 3.2rem;
     letter-spacing: 4px;
     color: #888;
