@@ -423,7 +423,7 @@ section {
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: rgb(24, 20, 20);
     font-size: 1.1rem;
 }
 
