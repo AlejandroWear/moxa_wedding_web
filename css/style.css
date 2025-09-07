@@ -154,7 +154,7 @@ section {
     font-size: 1.3rem;
     color: #666;
     line-height: 1.8;
-    font-style: italic;
+    font-style: serif;
 }
 
 .cute-drawing {
@@ -423,7 +423,7 @@ section {
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(24, 20, 20);
+    color: white;
     font-size: 1.1rem;
 }
 
