@@ -517,3 +517,39 @@ window.addEventListener('load', function() {
 });
 
 console.log('✨ Свадебный сайт загружен и готов к работе!');
+
+
+
+
+// Функция для открытия карт с направлениями к месту проведения свадьбы
+function openDirections() {
+    // Координаты и адрес Krokus Park Resort
+    const venue = {
+        name: "Krokus Park Resort",
+        address: "Ташкентская область, Бостандыкский район, п. Юсуфхона",
+        lat: 41.616862,
+        lng: 70.038791
+    };
+    
+    // Определяем устройство пользователя
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Для iOS устройств
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        // Apple Maps для iOS
+        const appleMapsUrl = `https://maps.apple.com/?address=${encodeURIComponent(venue.address)}&ll=${venue.lat},${venue.lng}&q=${encodeURIComponent(venue.name)}&t=m`;
+        window.open(appleMapsUrl, '_blank');
+    }
+    // Для Android устройств
+    else if (/android/i.test(userAgent)) {
+        // Google Maps для Android
+        const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}&travelmode=driving`;
+        window.open(googleMapsUrl, '_blank');
+    }
+    // Для десктопа и других устройств
+    else {
+        // Универсальная Google Maps ссылка
+        const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(venue.name)},${encodeURIComponent(venue.address)}&travelmode=driving`;
+        window.open(googleMapsUrl, '_blank');
+    }
+}
